@@ -3,23 +3,14 @@ cmake_minimum_required(VERSION 3.25)
 project(GuismusEngine VERSION 1.0)
 
 # Définissez vos fichiers sources et d'en-tête ici
-set(SOURCES
-    src/file1.cpp
-    src/file2.cpp
-    # Ajoutez ici tous les fichiers source de votre bibliothèque
-)
-
-set(HEADERS
-    headers/file1.hpp
-    headers/file2.hpp
-    # Ajoutez ici tous les fichiers d'en-tête de votre bibliothèque
-)
+set(SOURCES "src/GameEngine.cpp")
+set(HEADERS "headers/GameEngine.hpp" "headers/Utils.hpp")
 
 # Créez votre bibliothèque
 add_library(GuismusEngine ${SOURCES} ${HEADERS})
 
 # Configuration de votre bibliothèque (options de compilation, etc.)
-target_compile_features(GuismusEngine PUBLIC cxx_std_11)
+target_compile_features(GuismusEngine PUBLIC cxx_std_20)
 # Vous pouvez également ajouter d'autres options de compilation ici
 
 # Incluez les répertoires d'en-têtes

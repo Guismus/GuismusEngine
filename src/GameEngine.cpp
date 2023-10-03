@@ -5,7 +5,7 @@
 ** GameEngine
 */
 
-#include "../../headers/GameEngine/GameEngine.hpp"
+#include "GameEngine.hpp"
 
 Engine::GameEngine::GameEngine() {
     this->_entities = new std::vector<Engine::Entity>;

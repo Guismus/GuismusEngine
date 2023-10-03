@@ -1,2 +1,2 @@
 # GuismusEngine
-ECS hand builded
+ECS hand built

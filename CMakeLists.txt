@@ -21,7 +21,6 @@ target_include_directories(GuismusEngine
 )
 
 # Définissez d'autres options de compilation ou de bibliothèque ici
-#ma grosse teub
 
 # Exportez votre bibliothèque CPM
 include(CMakePackageConfigHelpers)

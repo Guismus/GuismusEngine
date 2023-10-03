@@ -1,2 +1,0 @@
-/usr/bin/ar qc libGuismusEngine.a CMakeFiles/GuismusEngine.dir/src/GameEngine.cpp.o
-/usr/bin/ranlib libGuismusEngine.a

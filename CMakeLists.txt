@@ -4,7 +4,7 @@ project(GuismusEngine VERSION 1.0)
 
 # Définissez vos fichiers sources et d'en-tête ici
 set(SOURCES "src/GameEngine.cpp")
-set(HEADERS "headers/GameEngine.hpp" "headers/Utils.hpp")
+set(HEADERS "headers/GameEngine.hpp" "headers/Utils.hpp" "headers/GameEngine")
 
 # Créez votre bibliothèque
 add_library(GuismusEngine ${SOURCES} ${HEADERS})
@@ -26,7 +26,7 @@ target_include_directories(GuismusEngine
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
     "${CMAKE_CURRENT_BINARY_DIR}/GuismusEngine/GuismusEngineConfigVersion.cmake"
-    VERSION 1.0
+    VERSION 1.0.2
     COMPATIBILITY AnyNewerVersion
 )
 

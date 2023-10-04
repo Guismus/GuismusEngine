@@ -1,17 +1,19 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(GuismusEngine VERSION 1.3)
+project(GuismusEngine VERSION 1.0)
 
 # Définissez vos fichiers sources et d'en-tête ici
 set(SOURCES "src/GameEngine.cpp")
 set(HEADERS "headers/GameEngine.hpp" "headers/Utils.hpp" "headers/GameEngine")
 
-# Créez votre bibliothèque statique et donnez-lui le nom souhaité
-add_library(GuismusEngine STATIC ${SOURCES} ${HEADERS})
-set_target_properties(GuismusEngine PROPERTIES OUTPUT_NAME "GuismusEngine")
-set_target_properties(GuismusEngine PROPERTIES PREFIX "")
+# Créez votre bibliothèque statique ou partagée en fonction du système d'exploitation
+if(WIN32)
+    add_library(GuismusEngine STATIC ${SOURCES} ${HEADERS})
+else()
+    add_library(GuismusEngine SHARED ${SOURCES} ${HEADERS})
+endif()
 
-# Configuration de votre bibliothèque statique (options de compilation, etc.)
+# Configuration de votre bibliothèque (options de compilation, etc.)
 target_compile_features(GuismusEngine PUBLIC cxx_std_20)
 # Vous pouvez également ajouter d'autres options de compilation ici
 
@@ -28,7 +30,7 @@ target_include_directories(GuismusEngine
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
     "${CMAKE_CURRENT_BINARY_DIR}/GuismusEngine/GuismusEngineConfigVersion.cmake"
-    VERSION 1.0.3
+    VERSION 1.0.2
     COMPATIBILITY AnyNewerVersion
 )
 
@@ -59,4 +61,3 @@ install(FILES
 )
 
 install(DIRECTORY headers/ DESTINATION include)
-

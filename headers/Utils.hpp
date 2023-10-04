@@ -78,6 +78,5 @@ namespace Engine
 
     //typedef std::vector<Component> Entity;
     typedef std::vector<Event> eventQueue;
-    typedef std::pair<std::function<void (Entity*, eventQueue *)>, Signature> System;
-    typedef std::pair<std::function<void (std::vector<Entity>*, int)>, Signature> ColisionSystem;
+    typedef std::pair<std::function<void (std::vector<Entity>*, int, eventQueue*)>, Signature> System;
 }

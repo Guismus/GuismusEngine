@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(GuismusEngine VERSION 1.1.0)
+project(GuismusEngine VERSION 2.0.0)
 
 # Définissez vos fichiers sources et d'en-tête ici
 set(SOURCES "src/GameEngine.cpp" "src/Utils.cpp")
@@ -30,7 +30,7 @@ target_include_directories(GuismusEngine
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
     "${CMAKE_CURRENT_BINARY_DIR}/GuismusEngine/GuismusEngineConfigVersion.cmake"
-    VERSION 1.1.0
+    VERSION 2.0.0
     COMPATIBILITY AnyNewerVersion
 )
 

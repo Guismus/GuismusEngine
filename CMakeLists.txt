@@ -8,6 +8,8 @@ set(HEADERS "headers/GameEngine.hpp" "headers/Utils.hpp" "headers/GameEngine")
 
 # Créez votre bibliothèque statique et donnez-lui le nom souhaité
 add_library(GuismusEngine STATIC ${SOURCES} ${HEADERS})
+set_target_properties(GuismusEngine PROPERTIES OUTPUT_NAME "GuismusEngine")
+set_target_properties(GuismusEngine PROPERTIES PREFIX "")
 
 # Configuration de votre bibliothèque statique (options de compilation, etc.)
 target_compile_features(GuismusEngine PUBLIC cxx_std_20)
@@ -21,7 +23,6 @@ target_include_directories(GuismusEngine
 )
 
 # Définissez d'autres options de compilation ou de bibliothèque ici
-set_target_properties(GuismusEngine PROPERTIES PREFIX "")
 
 # Exportez votre bibliothèque CPM
 include(CMakePackageConfigHelpers)

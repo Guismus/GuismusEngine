@@ -30,8 +30,8 @@ void Engine::GameEngine::run()
         }
     }
     while(_events->size()) {
-        std::cerr << _events->front().getValue();
-        _events->pop();
+        std::cerr << _events->back().getValue();
+        _events->pop_back();
     }
 }
 

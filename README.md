@@ -1,2 +1,2 @@
 # GuismusEngine
-ECS hand built
+ECS hand built, mostly by GDGiantDwarf

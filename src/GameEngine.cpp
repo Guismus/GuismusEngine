@@ -28,4 +28,10 @@ void Engine::GameEngine::run()
     }
 }
 
-Engine::GameEngine::~GameEngine() {}
+Engine::GameEngine::~GameEngine()
+{
+    delete _entities;
+    delete _entitySignatures;
+    delete _systems;
+    delete _events;
+}

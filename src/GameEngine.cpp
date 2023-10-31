@@ -19,7 +19,7 @@ void Engine::GameEngine::run()
     for (int i = 0; i < this->_systems->size(); i++) {
         for (int j = 0; j < this->_entities->size(); j++) {
             if ((this->_systems->at(i).second.getBits() | this->_entitySignatures->at(j).getBits()) == this->_entitySignatures->at(j).getBits())
-                this->_systems->at(i).first(this->_entities, j, this->_events);
+                this->_systems->at(i).first(this->_entities, j, this->_events, this->_entitySignatures);
         }
     }
     while(_events->size()) {
